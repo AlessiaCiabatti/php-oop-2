@@ -1,7 +1,7 @@
 <?php
 
 $db = [
-  new Products('Royal Canin giant adult', 64.99, 'https://shop-cdn-m.mediazs.com/bilder/7/800/rc_shn_giantadult_mv_1_7.jpg', 'Cani'),
+  new ProductCane('Royal Canin giant adult', 64.99, 'https://shop-cdn-m.mediazs.com/bilder/7/800/rc_shn_giantadult_mv_1_7.jpg', 'Cani', 'XL'),
 
   new Products('Royal Canin Veterinary Urinary', 21.99, 'https://static.zoomalia.com/prod_img/30709/xl_164fa7cdfad1a5aaf8370ebeda47a1ff1c31553781090.jpg', 'Cani'),
 

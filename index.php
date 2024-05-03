@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/Model/Products.php';
+require_once __DIR__ . '/Model/Cane.php';
 require_once __DIR__ . '/data/db.php';
 
 // $croccantiniCaneXL = new Products('Royal Canin giant adult', 64.99, 'https://shop-cdn-m.mediazs.com/bilder/7/800/rc_shn_giantadult_mv_1_7.jpg', 'Cani');
