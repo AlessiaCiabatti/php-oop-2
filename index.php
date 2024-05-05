@@ -14,7 +14,9 @@ require_once __DIR__ . '/data/db.php';
 // var_dump($croccantiniCaneUrinary);
 // var_dump($scatolettaGatti);
 
-var_dump($db);
+
+
+// var_dump($db);
 
 
 
@@ -26,12 +28,48 @@ var_dump($db);
 <head>
 
   <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 
 <body>
-  
+  <div class="container my-5">
+
+    <nav class="navbar mb-5">
+      <div class="container">
+        <div class="container d-flex justify-content-center">
+          <a class="navbar-brand logo" href="#">
+            <img src="logo/zarla-zampadotta-1x1-2400x2400-20210607-dg9bt479kwyprqb8k46x.png" alt="Bootstrap" width="30" height="24">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      <div class="d-flex justify-content-between">
+          <?php foreach($db as $product) : ?>
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <?php echo "<img src='" . $product->immagine . "' class='img-fluid'>"; ?>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title"> <?php echo $product->nome ?> </h6>
+              <p> <?php echo $product->categoria ?> </p>
+              <?php if ($product->categoria === 'Cani') : ?>
+                <p> <?php echo $product->taglia ? $product->taglia : '' ?> </p>
+              <?php endif; ?>
+            </div>
+          </div>
+
+          <?php endforeach ?>
+        </div>
+
+    </div>
+
+  </div>
 </body>
 
 </html>
