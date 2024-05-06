@@ -4,6 +4,7 @@ require_once __DIR__ . '/Model/Products.php';
 require_once __DIR__ . '/Model/Cane.php';
 require_once __DIR__ . '/data/db.php';
 
+
 // $croccantiniCaneXL = new Products('Royal Canin giant adult', 64.99, 'https://shop-cdn-m.mediazs.com/bilder/7/800/rc_shn_giantadult_mv_1_7.jpg', 'Cani');
 
 // $croccantiniCaneUrinary = new Products('Royal Canin Veterinary Urinary', 21.99, 'https://static.zoomalia.com/prod_img/30709/xl_164fa7cdfad1a5aaf8370ebeda47a1ff1c31553781090.jpg', 'Cani');
@@ -58,8 +59,10 @@ require_once __DIR__ . '/data/db.php';
             <div class="card-body">
               <h6 class="card-title"> <?php echo $product->nome ?> </h6>
               <p> <?php echo $product->categoria ?> </p>
+              <p> <?php echo $product->prezzo ?> </p>
               <?php if ($product->categoria === 'Cani') : ?>
                 <p> <?php echo $product->taglia ? $product->taglia : '' ?> </p>
+                <p> <?php echo $product->ingredients ? $product->ingredients : '' ?> </p>
               <?php endif; ?>
             </div>
           </div>
